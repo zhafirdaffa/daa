@@ -1,2 +1,8 @@
 sampleapp/db/data/*
 sampleapp/src/*
+/vendor
+/.idea
+Homestead.json
+Homestead.yaml
+.env
+.phpunit.result.cache
