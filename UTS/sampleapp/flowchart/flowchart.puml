@@ -1,0 +1,33 @@
+@startuml flowchart
+
+start
+
+:Pengelola membuka aplikasi;
+
+:Pengelola melihat dashboard utama;
+
+partition Menu_Management {
+    :Pengelola mengelola menu;
+    :Pengelola dapat menambah, mengubah, atau menghapus menu;
+    :Pengelola memperbarui stok dan harga menu;
+}
+
+partition Order_Management {
+    :Pengelola mencatat pesanan dari pelanggan;
+    :Pengelola memilih item menu yang dipesan;
+    :Pengelola mencatat jumlah pesanan;
+    :Pengelola menghitung total harga pesanan;
+}
+
+partition Payment_Processing {
+    :Pengelola memproses pembayaran;
+    :Pengelola memilih metode pembayaran (Tunai, Debit, E-wallet);
+    :Pengelola mencatat transaksi;
+    :Transaksi disimpan secara lokal;
+}
+
+:Pengelola menyinkronkan data dengan sistem pusat jika diperlukan;
+
+stop
+
+@enduml
